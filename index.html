@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panin Miroslav</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="gear-wrapper">
+  <i class="fas fa-cog rotating-gear"></i>
+</div>
+
+  <header>
+    <img src="./bestfront.jpg" alt="avatar" class="avatar">
+    <h1>Привет, я Мирослав</h1>
+    <p>Фронтенд-разработчик</p>
+  
+
+  </header>
+
+ <main>
+  <section id="about">
+  <h2>Обо мне</h2>
+  <p>
+    Меня зовут Мирослав Панин. Я начинающий фронтенд-разработчик, который осознанно выбрал путь в веб-разработку, потому что мне нравится видеть живой результат своей работы и делать интерфейсы удобными, быстрыми и красивыми.
+  </p>
+
+  <p>
+    Моя специализация — адаптивная вёрстка, пользовательские интерфейсы и реализация клиентской логики. На текущем этапе я работаю с HTML5, CSS3 (в том числе SCSS), JavaScript (ES6+), Git, и учусь применять Vue.js в реальных проектах. Также использую Tailwind CSS и Gulp для ускорения разработки.
+  </p>
+
+  <p>
+    Я ценю чистоту кода, внимателен к деталям и всегда стараюсь разбираться в том, что делаю. Для меня важно не просто «чтобы работало», а чтобы это было поддерживаемо, понятно и эстетично. Мне интересны интерфейсы, которые не раздражают пользователя, а помогают ему.
+  </p>
+
+  <p>
+    Сейчас активно работаю над расширением портфолио,  и учусь на практических проектах. В ближайшее время планирую глубже освоить Vue 3, REST API, а также основы TypeScript и Nuxt,Next,React,Angular.
+  </p>
+
+  <p>
+    Имею опыт стажировки , ищу первую полноценную работу в команде, где смогу развиваться как фронтенд-разработчик, приносить ценность и учиться . Готов к диалогу, открыт для вызовов и всегда стремлюсь к лучшему результату.
+  </p>
+</section>
+
+
+  <section id="skills">
+    <h2>Навыки</h2>
+    <ul>
+     <ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML</a></li>
+  <li><a href="https://sass-lang.com/documentation/" target="_blank">CSS (SCSS)</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a></li>
+  <li><a href="https://docs.github.com/en/get-started/quickstart" target="_blank">Git / GitHub</a></li>
+  <li><a href="https://vuejs.org/guide/introduction.html" target="_blank">Vue.js</a></li>
+  <li><a href="https://developer.wordpress.org/" target="_blank">WordPress</a></li>
+</ul>
+
+  </section>
+
+  <section id="projects">
+    <h2>Проекты</h2>
+    <div class="project">
+      <h3>Погодное приложение</h3>
+      <p>Vue, API, axios</p>
+      <a href="https://github.com/Miroslav-mobyDev/weather-app-on-vue.js" target="_blank">GitHub</a>
+       <a href="https://miroslav-mobydev.github.io/weather-app-on-vue.js/" target="_blank">Демо</a>
+    </div>
+    
+   <div class="project">
+      <h3>Cайт компании MobyDev</h3>
+      <p>Собран на Wordpress , работал с препрцессором CSS - SCSS, php , Vanilla JS , HTML</p>
+      <a href="https://mobydev.kz/" target="_blank">MobyDev</a>
+     
+    </div>
+  </section>
+
+<section id="contact">
+  <h2>Контакты</h2>
+  <p>
+    <a href="mailto:yourmail@gmail.com" target="_blank">
+      <i class="fas fa-envelope"></i> pnahuj314@gmail.com
+    </a>
+  </p>
+  <p>
+    <a href="https://t.me/your_username" target="_blank">
+      <i class="fab fa-telegram"></i> @miroslav1612
+    </a>
+  </p>
+  <p>
+    <a href="https://github.com/your_username" target="_blank">
+      <i class="fab fa-github"></i> https://github.com/Miroslav-mobyDev/
+    </a>
+  </p>
+</section>
+
+
+  
+
+</main>
+
+  <footer>
+    <p>© 2025 Мирослав Панин</p>
+  </footer>
+
+ <script>
+  let lastScrollTop = 0;
+  let rotation = 0;
+
+  window.addEventListener("scroll", () => {
+    const gear = document.querySelector(".rotating-gear");
+
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const scrollDirection = scrollTop > lastScrollTop ? 1 : -1;
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+
+    rotation += 5 * scrollDirection; 
+    gear.style.transform = `rotate(${rotation}deg)`;
+  });
+</script>
+
+</body>
+</html>
