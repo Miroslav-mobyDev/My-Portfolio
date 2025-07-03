@@ -233,3 +233,10 @@ ul li a:hover {
   width:600px;
   height:600px;
 }
+
+@media (max-width:670px) {
+  .avatar {
+    width:90%;
+    height:auto;
+  }
+}
